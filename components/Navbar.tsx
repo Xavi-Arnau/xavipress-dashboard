@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "../img/logo.png";
+
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import {
   DropdownMenu,
@@ -11,12 +12,13 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import ThemeToggler from "@/components/ThemeToggler";
+import { OctagonX } from "lucide-react";
 
 const Navbar = () => {
   return (
     <div className="bg-primary dark:bg-slate-700 text-white py-2 px-5 flex justify-between ">
-      <Link href="/">
-        <Image src={logo} alt="XaviPress" width={40}></Image>
+      <Link href="/" className="flex flex-row gap-2 items-center">
+        <OctagonX size={32} /> XaviPress
       </Link>
       <div className="flex items-center">
         <ThemeToggler />
